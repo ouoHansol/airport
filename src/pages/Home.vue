@@ -3,12 +3,22 @@
     <BtnSearch title="검색" :width="800" :height="300">
       <div class="serach-group">
         <div class="search-item">
-          <label class="label">장애번호</label>
-          <input type="text" class="input">
+          <label class="label">점검일자</label>
+          <TermsBox/>
         </div>
         
         <div class="search-item">
           <label class="label">시설명</label>
+          <input type="text" class="input">
+        </div>
+        
+        <div class="search-item">
+          <label class="label">시설위치</label>
+          <input type="text" class="input">
+        </div>
+        
+        <div class="search-item">
+          <label class="label">부서</label>
           <input type="text" class="input">
         </div>
         
@@ -19,6 +29,7 @@
 
 <script setup>
 import BtnSearch from '@/components/layouts/BtnSearch.vue';
+import TermsBox from '@/components/layouts/TremsBox.vue';
 import { ref, provide, onMounted } from 'vue';
 
 const pageTitle = ref('');
@@ -39,13 +50,14 @@ onMounted(() => {
   padding: 2rem;
 }
 .serach-group{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 .search-item{
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: right;
   align-items: center;
   padding: 0px 10px;
 }

@@ -51,5 +51,9 @@ const boxStyle = computed(() => {
 }
 .content-area {
     margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
 }
 </style>
