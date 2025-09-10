@@ -5,22 +5,11 @@
                 <th></th>
                 <th>No</th>
                 <th>점검그룹번호</th>
-                <th>점검순서</th>
                 <th>항목번호</th>
                 <th>주기</th>
                 <th>점검코드</th>
                 <th>점검항목</th>
                 <th>점검방법</th>
-                <th>적정기준</th>
-                <th>수치/판정 구분</th>
-                <th>하한치</th>
-                <th>표준치</th>
-                <th>하한계산식</th>
-                <th>하한계산치</th>
-                <th>상한계산식</th>
-                <th>상한계산치</th>
-                <th>상한치</th>
-                <th>단위</th>
                 <th>시행여부</th>
                 <th></th>
             </tr>
@@ -30,17 +19,6 @@
                 <td>
                     <input type="checkbox" />
                 </td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
