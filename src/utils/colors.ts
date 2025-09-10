@@ -1,6 +1,6 @@
 // 공통 색상 상수 정의
 export const COLORS = {
-  primary: '#007bff',
+  primary: '#17a2b8',
   secondary: '#6c757d', 
   tertiary: '#adb5bd',
   success: '#28a745',
@@ -31,10 +31,6 @@ export function getTextColor(color: keyof typeof COLORS): string {
 
 // 버튼 색상 타입 정의
 export type ButtonColor = keyof typeof COLORS;
-
-export const getColor = (colorName: ButtonColor): string => {
-  return COLORS[colorName];
-};
 
 export const getCSSVariables = () => {
   return Object.entries(COLORS)

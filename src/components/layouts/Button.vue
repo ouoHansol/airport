@@ -7,7 +7,7 @@
 </template> 
 
 <script setup lang="ts">
-import { COLORS, getTextColor, TEXT_COLORS, type ButtonColor } from '@/utils/colors';
+import { COLORS, getTextColor, type ButtonColor } from '@/utils/colors';
 
 interface ButtonProps {
   name?: string;

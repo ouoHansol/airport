@@ -3,8 +3,13 @@
     <section class="section">
       <h2>표준점검항목</h2>
       <div class="box-container">
-        <Button>생성</Button>
-        <p>This is basic 나중에 표</p>
+        <div class="button-container">
+          <Button name="생성"></Button>
+          <Button name="Excel"></Button>
+          <Button name="설정"></Button>
+          <Button name="삭제" color="danger"></Button>
+        </div>
+          <p>여기 표모듈</p>
         <div class="flex-container">
           <div class="flex-item">Item 1</div>
           <div class="flex-item">Item 2</div>
@@ -57,6 +62,13 @@ h2 {
 p {
   margin-bottom: 15px;
   color: #555;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+  justify-content: right;
 }
 
 /* 기본 Flexbox 스타일 */
