@@ -3,18 +3,24 @@
     <section class="section">
       <h2>표준점검항목</h2>
       <div class="box-container">
+
         <div class="button-container">
           <Button name="생성"></Button>
           <Button name="Excel"></Button>
           <Button name="설정"></Button>
           <Button name="삭제" color="danger"></Button>
         </div>
-          <p>여기 표모듈</p>
+
+        <div class="check-table">
+          <Table></Table>
+        </div>
+
         <div class="flex-container">
           <div class="flex-item">Item 1</div>
           <div class="flex-item">Item 2</div>
           <div class="flex-item">Item 3</div>
         </div>
+
       </div>
     </section>
   </div>
@@ -22,6 +28,7 @@
 
 <script setup lang="ts">
 import Button from '@/components/layouts/Button.vue';
+import Table from '@/components/layouts/Table.vue';
 import {inject, onMounted, type Ref} from 'vue';
 
 const pageTitle = inject('pageTitle');
@@ -89,4 +96,11 @@ p {
   border-radius: 4px;
   min-width: 80px;
 }
+
+.check-table {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
 </style>
