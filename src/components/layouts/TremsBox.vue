@@ -23,7 +23,5 @@
     height: 30px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 </style>

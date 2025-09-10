@@ -23,7 +23,11 @@
         </div>
         
       </div>
+
     </BtnSearch>
+
+    <router-link to="/test" >Test</router-link>
+
   </div>
 </template>
 
@@ -55,6 +59,7 @@ onMounted(() => {
   gap: 10px;
 }
 .search-item{
+  width: 300px;
   display: flex;
   flex-direction: row;
   justify-content: right;
@@ -64,7 +69,7 @@ onMounted(() => {
 .label{
   text-align: left;
   margin: 10px;
-  width: 100px;
+  width: 150px;
 }
 .input{
   width: auto;

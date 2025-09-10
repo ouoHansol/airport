@@ -3,7 +3,7 @@
     <div class="container">
       <h1 class="logo">{{ pageTitle }}</h1>
       <nav class="nav">
-        <span class="nav-item">홍길동님</span>
+        <router-link to="/about" class="nav-item">About</router-link>
         <span class="nav-item">LogOut</span>
       </nav>
     </div>
