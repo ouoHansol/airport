@@ -37,10 +37,10 @@ const textColor = getTextColor(props.color);
     justify-content: center;
     align-items: center;
     /* 최종적으로는 css variables로 변경 */
-    background-color: var(--backgroundColor);
+    background-color: v-bind(backgroundColor);
     border: none;
     border-radius: 4px;
-    color: var(--textColor);
+    color: v-bind(textColor);
 }
 
 </style>

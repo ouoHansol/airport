@@ -14,13 +14,10 @@
         <div class="check-table">
           <Table></Table>
         </div>
+      </div>
 
-        <div class="flex-container">
-          <div class="flex-item">Item 1</div>
-          <div class="flex-item">Item 2</div>
-          <div class="flex-item">Item 3</div>
-        </div>
-
+      <h2>점검항목</h2>
+      <div class="box-container">
       </div>
     </section>
   </div>
@@ -42,25 +39,25 @@ onMounted(() => {
 <style scoped>
 .learning-container {
   max-width: 1600px;
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .section {
-  margin-bottom: 40px;
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 22px;
   color: #444;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 
 .box-container {
-  margin-bottom: 30px;
-  padding: 20px;
+  margin-bottom: 1rem;
+  padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f9f9f9;
