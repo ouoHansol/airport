@@ -3,7 +3,7 @@
         <thead class="table-header">
             <tr>
                 <th></th>
-                <th>순번</th>
+                <th>No</th>
                 <th>점검그룹번호</th>
                 <th>점검순서</th>
                 <th>항목번호</th>
@@ -22,11 +22,14 @@
                 <th>상한치</th>
                 <th>단위</th>
                 <th>시행여부</th>
+                <th></th>
             </tr>
         </thead>
         <tbody class="table-body">
             <tr>
-                <td>□</td>
+                <td>
+                    <input type="checkbox" />
+                </td>
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
@@ -46,12 +49,14 @@
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
+                <td><Button name="삭제" color="danger"/></td>
             </tr>
         </tbody>
     </table>
 </template>
 
 <script setup lang="ts">
+import Button from '@/components/layouts/Button.vue';
 </script>
 
 <style scoped>

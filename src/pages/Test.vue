@@ -18,6 +18,9 @@
 
       <h2>점검항목</h2>
       <div class="box-container">
+        <label>
+          항목번호 <input type="text" class="input"></input>
+        </label>
       </div>
     </section>
   </div>
