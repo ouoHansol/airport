@@ -1,4 +1,4 @@
-// 공통 색상 상수 정의
+// 공통 색상 상수 정의 - 이거 css variables로
 export const COLORS = {
   primary: '#17a2b8',
   secondary: '#6c757d', 

@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import './assets/css/main.css'
 
 // 전역 CSS 변수 설정
 import { getCSSVariables } from './utils/colors'
