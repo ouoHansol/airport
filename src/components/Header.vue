@@ -10,10 +10,10 @@
   </header>
 </template>
 
-<script setup>
-import { inject } from 'vue';
+<script setup lang="ts">
+import { inject, type Ref } from 'vue';
 
-const pageTitle = inject('pageTitle');
+const pageTitle = inject<Ref<string>>('pageTitle');
 
 </script>
 

@@ -1,11 +1,19 @@
-import { ref, computed } from 'vue'
+import { ref, computed, type Ref, type ComputedRef } from 'vue'
+
+interface UseCounterReturn {
+  count: Ref<number>
+  increment: () => void
+  decrement: () => void
+  reset: () => void
+  doubleCount: ComputedRef<number>
+}
 
 /**
  * 카운터 기능을 제공하는 composable 함수
- * @param {number} initialValue - 초기값 (기본값: 0)
- * @returns {object} 카운터 관련 함수들과 상태
+ * @param initialValue - 초기값 (기본값: 0)
+ * @returns 카운터 관련 함수들과 상태
  */
-export function useCounter(initialValue = 0) {
+export function useCounter(initialValue: number = 0): UseCounterReturn {
   const count = ref(initialValue)
   
   const increment = () => {

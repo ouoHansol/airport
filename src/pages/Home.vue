@@ -27,13 +27,13 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import BtnSearch from '@/components/layouts/BtnSearch.vue';
 import TermsBox from '@/components/layouts/TremsBox.vue';
-import { ref, provide, onMounted } from 'vue';
+import { ref, provide, onMounted, type Ref } from 'vue';
 
-const pageTitle = ref('');
-const userName = ref('');
+const pageTitle: Ref<string> = ref('');
+const userName: Ref<string> = ref('');
 
 provide('pageTitle', pageTitle);
 provide('userName', userName);
@@ -64,6 +64,7 @@ onMounted(() => {
 .label{
   text-align: left;
   margin: 10px;
+  width: 100px;
 }
 .input{
   width: auto;
