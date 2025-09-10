@@ -27,6 +27,8 @@
     </BtnSearch>
 
     <router-link to="/test" >Test</router-link>
+    <div></div>
+    <router-link to="/List" >List</router-link>
 
   </div>
 </template>

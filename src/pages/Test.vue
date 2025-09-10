@@ -18,9 +18,7 @@
 
       <h2>점검항목</h2>
       <div class="box-container">
-        <label>
-          항목번호 <input type="text" class="input"></input>
-        </label>
+        <CheckItem></CheckItem>
       </div>
     </section>
   </div>
@@ -28,6 +26,7 @@
 
 <script setup lang="ts">
 import Button from '@/components/layouts/Button.vue';
+import CheckItem from '@/components/layouts/CheckItem.vue';
 import Table from '@/components/layouts/Table.vue';
 import {inject, onMounted, type Ref} from 'vue';
 

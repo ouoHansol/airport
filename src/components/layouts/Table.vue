@@ -27,7 +27,10 @@
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
-                <td><Button name="삭제" color="danger"/></td>
+                <td style="display: flex; flex-direction: row; gap: 0.2rem; justify-content: center; align-items: center;">
+                    <Button name="복사" color="primary"/>
+                    <Button name="삭제" color="danger"/>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -76,6 +79,8 @@ th{
 
 td{
     background-color: #fff;
+    font-size: 12px;
+    flex-direction: row;
 }
 
 </style>
