@@ -12,7 +12,7 @@
         </div>
 
         <div class="check-table">
-          <Table></Table>
+          <Table :headers="TABLE_HEADERS.INSPECTION"></Table>
         </div>
       </div>
 
@@ -25,9 +25,10 @@
 </template>
 
 <script setup lang="ts">
-import Button from '@/components/layouts/Button.vue';
-import CheckItem from '@/components/layouts/CheckItem.vue';
-import Table from '@/components/layouts/Table.vue';
+import Button from '@/components/form/Button.vue';
+import CheckItem from '@/components/form/CheckItem.vue';
+import Table from '@/components/form/Table.vue';
+import { TABLE_HEADERS } from '@/config/tableHeaders';
 import {inject, onMounted, type Ref} from 'vue';
 
 const pageTitle = inject('pageTitle');

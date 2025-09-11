@@ -34,8 +34,8 @@
 </template>
 
 <script setup lang="ts">
-import BtnSearch from '@/components/layouts/BtnSearch.vue';
-import TermsBox from '@/components/layouts/TremsBox.vue';
+import BtnSearch from '@/components/form/BtnSearch.vue';
+import TermsBox from '@/components/form/TremsBox.vue';
 import { ref, provide, onMounted, type Ref } from 'vue';
 
 const pageTitle: Ref<string> = ref('');

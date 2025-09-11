@@ -3,21 +3,16 @@
         <thead class="table-header">
             <tr>
                 <th></th>
-                <th>No</th>
-                <th>점검그룹번호</th>
-                <th>항목번호</th>
-                <th>주기</th>
-                <th>점검코드</th>
-                <th>점검항목</th>
-                <th>점검방법</th>
-                <th>시행여부</th>
+                <th v-for="header in headers" :key="header">{{ header }}</th>
                 <th></th>
             </tr>
         </thead>
         <tbody class="table-body">
             <tr>
                 <td>
-                    <input type="checkbox" />
+                    <span>
+                        <input type="checkbox" />
+                    </span>
                 </td>
                 <td>1</td>
                 <td>1</td>
@@ -27,9 +22,11 @@
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
-                <td style="display: flex; flex-direction: row; gap: 0.2rem; justify-content: center; align-items: center;">
-                    <Button name="복사" color="primary"/>
-                    <Button name="삭제" color="danger"/>
+                <td>
+                    <span>
+                        <Button name="복사" color="primary"/>
+                        <Button name="삭제" color="danger"/>
+                    </span>
                 </td>
             </tr>
         </tbody>
@@ -37,7 +34,17 @@
 </template>
 
 <script setup lang="ts">
-import Button from '@/components/layouts/Button.vue';
+import Button from '@/components/form/Button.vue';
+import { DEFAULT_HEADERS } from '@/config/tableHeaders';
+
+// Props
+interface Props {
+  headers?: string[]
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  headers: () => DEFAULT_HEADERS
+})
 </script>
 
 <style scoped>
@@ -81,6 +88,13 @@ td{
     background-color: #fff;
     font-size: 12px;
     flex-direction: row;
+}
+
+span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
 }
 
 </style>
