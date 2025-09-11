@@ -1,13 +1,13 @@
 <template>
 <!-- 버튼모듈 생성 테스트 -->
-<button class="sol-btn">
+<button class="sol-btn" :class="props.color">
     {{ props.name }}
 </button>
 
 </template> 
 
 <script setup lang="ts">
-import { COLORS, getTextColor, type ButtonColor } from '@/utils/colors';
+import { type ButtonColor } from '@/utils/colors';
 
 interface ButtonProps {
   name?: string;
@@ -23,24 +23,22 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   size: 48
 });
 
-// 색상 값 계산
-const backgroundColor = COLORS[props.color];
-const textColor = getTextColor(props.color);
-
 </script>
 
 <style scoped>
-.sol-btn{
+.sol-btn {
     display: flex;
     min-width: 3rem;
     min-height: 2rem;
     justify-content: center;
     align-items: center;
     /* 최종적으로는 css variables로 변경 */
-    background-color: v-bind(backgroundColor);
+    background-color: var(--backgroundColor);
     border: none;
     border-radius: 4px;
-    color: v-bind(textColor);
+    color: var(--textColor);
 }
-
+.sol-btn.danger {
+  --backgroundColor: var(--color-danger);
+}
 </style>
