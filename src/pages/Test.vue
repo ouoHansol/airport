@@ -6,16 +6,28 @@
       <div class="box-container">
         <div class="search-group">
           <div class="search-item">
-            <label>시설위치</label> <input type="text" class="input"></input>
+            <label>시설위치</label>
+            <div style="position: relative; display: inline-block;">
+              <input type="text" class="input" ></input>
+              <span style="position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                🔍
+              </span>
+            </div>
           </div>
           <div class="search-item">
-          <label>시설명</label> <input type="text" class="input"></input>
+          <label>시설명</label>
+            <div style="position: relative; display: inline-block;">
+              <input type="text" class="input" ></input>
+              <span style="position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                🔍
+              </span>
+            </div>
           </div>  
           <div class="search-item">
             <label>예방점검번호</label> <input type="text" class="input"></input>
           </div>
           <div class="search-item">
-            <label>재·개정상태</label> <input type="text" class="input"></input>
+            <label>재·개정상태</label> <input style="text-align: right" type="text" value="▼" class="input"></input>
           </div>
           <div class="search-item">
             <label>등록일</label> <input type="text" class="input"></input>
@@ -185,7 +197,6 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  gap: 1rem;
 }
 
 .search-item {
@@ -193,7 +204,6 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #444;
   max-width: 300px;
   margin-left: auto;
 }
