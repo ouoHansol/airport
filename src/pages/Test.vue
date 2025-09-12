@@ -153,25 +153,6 @@ label{
   gap: 0.2rem;
 }
 
-/* 기본 Flexbox 스타일 */
-.flex-container {
-  display: flex;
-  background-color: #e3f2fd;
-  padding: 15px;
-  border: 2px solid #2196f3;
-  border-radius: 4px;
-}
-
-.flex-item {
-  background-color: #ff9800;
-  color: white;
-  padding: 15px;
-  margin: 5px;
-  text-align: center;
-  border-radius: 4px;
-  min-width: 80px;
-}
-
 .check-table {
   display: flex;
   height: 100%;

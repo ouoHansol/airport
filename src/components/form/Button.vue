@@ -7,11 +7,7 @@
 </template> 
 
 <script setup lang="ts">
-<<<<<<< HEAD
 import { COLORS, getTextColor, type ButtonColor } from '@/utils/colors.ts';
-=======
-import { type ButtonColor } from '@/utils/colors';
->>>>>>> e5cc1eb6e967abff4857de0a83bd48c622d6054c
 
 interface ButtonProps {
   name?: string;
