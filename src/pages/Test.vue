@@ -2,6 +2,15 @@
   <div class="learning-container">
 
     <section class="section">
+      <h2>검색</h2>
+      <div class="box-container">
+        <div class="search-item">
+          <label>시설위치</label> <input type="text" class="input"></input>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
       <div class="section-item">
         <button @click="listState = true" class="section-item-btn">점검표준관리 목록</button>
         <div class="section-item-btn-line"></div>
@@ -28,7 +37,7 @@
           </div>
 
           <div class="check-table">
-            <Table :headers="TABLE_HEADERS.DEFAULT_INSPECTION"></Table>
+            <CheckTable :headers="TABLE_HEADERS.DEFAULT_INSPECTION"></CheckTable>
           </div>
         </div>
       </section>
@@ -46,8 +55,7 @@
 
 <script setup lang="ts">
 import Button from '@/components/form/Button.vue';
-import CheckItem from '@/components/form/CheckItem.vue';
-import Table from '@/components/form/Table.vue';
+import CheckTable from '@/tables/CheckTable.vue';
 import { TABLE_HEADERS } from '@/config/tableHeaders';
 import {inject, onMounted, type Ref, ref} from 'vue';
 
@@ -138,7 +146,7 @@ p {
   gap:0.5rem;
 }
 
-label{
+.tap-item label{
   min-width: 8rem;
   padding: 0.5rem;
   text-align: center;
