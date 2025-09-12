@@ -7,20 +7,20 @@
 </template> 
 
 <script setup lang="ts">
-import { COLORS, getTextColor, type ButtonColor } from '@/utils/colors';
+import { COLORS, getTextColor, type ButtonColor } from '@/utils/colors.ts';
 
 interface ButtonProps {
   name?: string;
   color?: ButtonColor;
   type?: "button" | "submit" | "reset";
-  size?: number;
+  width?: string;
 }
 
 const props = withDefaults(defineProps<ButtonProps>(), {
   name: "생성",
   color: "primary",
   type: "button",
-  size: 48
+  width: "3rem",
 });
 
 // 색상 값 계산
@@ -32,7 +32,7 @@ const textColor = getTextColor(props.color);
 <style scoped>
 .sol-btn{
     display: flex;
-    min-width: 3rem;
+    min-width: v-bind(width);
     min-height: 2rem;
     justify-content: center;
     align-items: center;

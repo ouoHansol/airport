@@ -2,9 +2,7 @@
     <table class="table-container">
         <thead class="table-header">
             <tr>
-                <th></th>
                 <th v-for="header in headers" :key="header">{{ header }}</th>
-                <th></th>
             </tr>
         </thead>
         <tbody class="table-body">
@@ -15,13 +13,12 @@
                     </span>
                 </td>
                 <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
+                <td>제1작업표준</td>
+                <td>시설시설</td>
+                <td>재정완료</td>
+                <td>2025-09-11</td>
+                <td><span><Button name="개정하기" width="4rem"></Button></span></td>
+                <td><span><Button name="목록확인" width="4rem"></Button></span></td>
                 <td>
                     <span>
                         <Button name="복사" color="primary"/>
@@ -36,6 +33,7 @@
 <script setup lang="ts">
 import Button from '@/components/form/Button.vue';
 import { DEFAULT_HEADERS } from '@/config/tableHeaders';
+// 에러 원인: 파일명 오타 (TABEL_HEADERS → tableHeaders) 또는 경로 대소문자 불일치
 
 // Props
 interface Props {

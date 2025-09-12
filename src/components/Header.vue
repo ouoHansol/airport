@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="container">
-      <h1 class="logo">{{ pageTitle }}</h1>
+      <h1 class="logo">예방점검</h1>
       <nav class="nav">
         <router-link to="/about" class="nav-item">About</router-link>
         <span class="nav-item">LogOut</span>
