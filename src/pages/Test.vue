@@ -4,8 +4,22 @@
     <section class="section">
       <h2>검색</h2>
       <div class="box-container">
-        <div class="search-item">
-          <label>시설위치</label> <input type="text" class="input"></input>
+        <div class="search-group">
+          <div class="search-item">
+            <label>시설위치</label> <input type="text" class="input"></input>
+          </div>
+          <div class="search-item">
+          <label>시설명</label> <input type="text" class="input"></input>
+          </div>  
+          <div class="search-item">
+            <label>예방점검번호</label> <input type="text" class="input"></input>
+          </div>
+          <div class="search-item">
+            <label>재·개정상태</label> <input type="text" class="input"></input>
+          </div>
+          <div class="search-item">
+            <label>등록일</label> <input type="text" class="input"></input>
+          </div>
         </div>
       </div>
     </section>
@@ -165,6 +179,28 @@ p {
   display: flex;
   height: 100%;
   justify-content: center;
+}
+
+.search-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 1rem;
+}
+
+.search-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
+  max-width: 300px;
+  margin-left: auto;
+}
+
+.search-item label{
+  margin: 0.5rem;
+  font-size: 14px;
 }
 
 </style>
