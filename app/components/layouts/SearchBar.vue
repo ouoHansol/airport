@@ -12,7 +12,7 @@
     display: flex;
     width: 100%;
     height: 100px;
-    background-color: #dcdcdc;
+    background-color: var(--color-background-light);
     border-radius: 1rem;
 }
 

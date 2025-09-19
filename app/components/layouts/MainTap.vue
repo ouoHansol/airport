@@ -8,7 +8,7 @@
                 X
             </div>
         </div>
-        <div style="border-bottom: #26b099 1px solid;" class="main-tap">
+        <div style="border-bottom: var(--color-primary) 1px solid;" class="main-tap">
             <div class="main-tap-left-text">
                 비행검사 질의 게시판
             </div>
@@ -30,9 +30,9 @@
 .main-tap {
     min-width: 14rem;
     min-height: 3rem;
-    border-right: 1px solid #26b099;
-    border-top: 5px solid #26b099;
-    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid var(--color-primary);
+    border-top: 5px solid var(--color-primary);
+    border-bottom: 1px solid var(--color-white);
 
     display: flex;
     align-items: center;
@@ -50,6 +50,6 @@
 }
 .main-tap-margin {
     width: 100%;
-    border-bottom: 1px solid #26b099;
+    border-bottom: 1px solid var(--color-primary);
 }
 </style>

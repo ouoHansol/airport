@@ -30,8 +30,9 @@ const HeaderMenus =
     {name: '교육/자격', path: '/'}]; // education
 
 const handleNavigation = (menu: string) => {
-    navigateTo(menu);
     pathSegments.value = menu.split('/')[1] || '';
+
+    navigateTo(menu);
 };
 
 onMounted(() => {
@@ -47,10 +48,10 @@ onMounted(() => {
     max-width: 100vw;
 }
 .header-wrapper-left {
-    border-top: 5px solid #ffd17b;
+    border-top: 5px solid var(--color-secondary);
 }
 .header-wrapper-right {
-    border-top: 5px solid #26b099;
+    border-top: 5px solid var(--color-primary);
 }
 .header-container {
     display: flex;
@@ -58,7 +59,7 @@ onMounted(() => {
     align-items: center;
     height: 5rem;
     padding-left: 1rem;
-    border-bottom: 1px solid #9d9d9d;
+    border-bottom: 1px solid var(--color-border);
     gap: 4rem;
 }
 .header-container span, img {
@@ -66,7 +67,7 @@ onMounted(() => {
 }
 
 .active {
-    color: #26b099;
+    color: var(--color-active);
     font-weight: bold;
 }
 </style>

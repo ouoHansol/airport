@@ -1,0 +1,35 @@
+:root {
+  /* Primary Colors */
+  --color-primary: #26b099;
+  --color-primary-light: #4bc4a8;
+  --color-primary-dark: #1e8b73;
+  
+  /* Secondary Colors */
+  --color-secondary: #ffd17b;
+  --color-secondary-light: #ffdd9a;
+  --color-secondary-dark: #e6b85c;
+  
+  /* Accent Colors */
+  --color-accent: rgb(230, 145, 59);
+  --color-accent-light: rgb(242, 170, 95);
+  --color-accent-dark: rgb(200, 125, 45);
+  
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-gray-light: #dcdcdc;
+  --color-gray: #9d9d9d;
+  --color-gray-dark: #666666;
+  --color-black: #000000;
+  
+  /* Semantic Colors */
+  --color-border: var(--color-gray);
+  --color-text: var(--color-gray-dark);
+  --color-text-muted: var(--color-gray);
+  --color-background: var(--color-white);
+  --color-background-light: var(--color-gray-light);
+  
+  /* State Colors */
+  --color-active: var(--color-primary);
+  --color-hover: var(--color-primary-light);
+  --color-focus: var(--color-primary);
+}

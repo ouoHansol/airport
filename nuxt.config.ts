@@ -2,5 +2,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  components: true
+  components: true,
+  css: ['./app/assets/css/variables.css']
 })
