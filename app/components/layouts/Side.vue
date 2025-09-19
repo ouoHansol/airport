@@ -25,17 +25,15 @@ import { getMenusByPath } from '~/utils/navigation'
 
 const route = useRoute()
 
-// 현재 route에 따라 메뉴 결정 (간단해짐!)
 const currentMenus = computed(() => {
     return getMenusByPath(route.path)
 })
 
 const handleNavigation = (path: string) => {
-    // 현재 경로에서 첫 번째 세그먼트 추출 (예: /validation/flight/plan -> /validation)
+    // 현재 경로에서 첫 번째 세그먼트 추출 
     const pathSegments = route.path.split('/').filter(segment => segment)
     const currentBasePath = pathSegments.length > 0 ? `/${pathSegments[0]}` : ''
     
-    // 상대 경로로 이동
     const fullPath = `${currentBasePath}${path}`
     navigateTo(fullPath)
 }

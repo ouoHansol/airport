@@ -1,11 +1,10 @@
-// 타입 정의
 interface MenuItem {
   name: string;
   path: string;
   subMenu?: MenuItem[];
 }
 
-// 모든 메뉴를 한 곳에서 관리
+// 메뉴관리
 export const allMenus = {
   inspection: [
     { name: "점검표준", path: "/standard" },
@@ -69,9 +68,6 @@ export const getMenusByPath = (path: string): MenuItem[] => {
   
   const selectedMenus = allMenus[firstSegment as keyof typeof allMenus] || allMenus.validation;
   
-  // readonly 배열을 mutable 배열로 변환
-  return selectedMenus.map((menu: any) => ({
-    ...menu,
-    subMenu: menu.subMenu ? menu.subMenu.map((sub: any) => ({ ...sub })) : undefined
-  }));
+  // 타입 캐스팅으로 간단하게 해결
+  return selectedMenus as unknown as MenuItem[];
 };

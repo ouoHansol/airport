@@ -1,18 +1,16 @@
 <template>
-    <div class="main-container">
+    <SearchBar />
+</template> 
 
-    </div>
-</template>
-
-<script lang="js">
+<script setup lang="ts">
+import SearchBar from '../components/layouts/SearchBar.vue';
 </script>
 
-<style scoped>
+<style scoped>  
 .main-container{
     display: flex;
-    width: 100px;
-    height: 100%;
-    background-color: #808080;
+    width: 100%;
+    height: 100px;
+    background-color: #dcdcdc;
 }
-
 </style>
