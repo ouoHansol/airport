@@ -5,12 +5,13 @@
     </div>
     <div class="header-container">
         <img @click="$router.push('/')" src="/img/inc_logo.png" alt="로고" style="height: 3rem;" />
-        <span v-for="menu in HeaderMenus" 
+        <span v-for="menu in headerMenus" 
                 :key="menu.path" 
                 @click="handleNavigation(menu.path)" 
                 :class="{'active': pathSegments === menu.path.split('/')[1]}">
                 {{ menu.name }}
-        </span>        
+        </span>
+        <button @click="addTab">탭 추가</button>
     </div>
 </template>
 
@@ -20,20 +21,24 @@ const route = useRoute();
 
 const pathSegments : Ref<string> = ref(route.path.split('/')[1] || '');
 
-const HeaderMenus = 
-    [{name: '기준정보', path: '/'}, 
+const headerMenus = ref([
+    {name: '기준정보', path: '/'}, 
     {name: '근무관리', path: '/'}, // work
     {name: '예방점검', path: '/inspection'}, 
     {name: '검사관리', path: '/validation'}, 
     {name: '장비관리', path: '/'}, //equipment
     {name: '정보관리', path: '/'}, //info 
-    {name: '교육/자격', path: '/'}]; // education
+    {name: '교육/자격', path: '/'}]); // education
 
 const handleNavigation = (menu: string) => {
     pathSegments.value = menu.split('/')[1] || '';
 
     navigateTo(menu);
 };
+
+const addTab = () => {
+    headerMenus.value.push({name: 'new-' + headerMenus.value.length + 1, path: '/'});
+}
 
 onMounted(() => {
 });
