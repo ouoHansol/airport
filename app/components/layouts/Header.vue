@@ -7,7 +7,7 @@
         <img @click="$router.push('/')" src="/img/inc_logo.png" alt="로고" style="height: 3rem;" />
         <span v-for="menu in HeaderMenus" 
                 :key="menu.path" 
-                onclick="ff" 
+                @click="handleNavigation(menu.path)" 
                 :class="{'active': pathSegments === menu.path.split('/')[1]}">
                 {{ menu.name }}
         </span>        
@@ -29,13 +29,12 @@ const HeaderMenus =
     {name: '정보관리', path: '/'}, //info 
     {name: '교육/자격', path: '/'}]; // education
 
-const ff = computed(() => {
-    pathSegments.value = route.path.split('/')[1] || '';
-    console.log(pathSegments.value);
-});
+const handleNavigation = (menu: string) => {
+    navigateTo(menu);
+    pathSegments.value = menu.split('/')[1] || '';
+};
 
 onMounted(() => {
-    console.log(route.path.split('/')[1]);
 });
 
 </script>
