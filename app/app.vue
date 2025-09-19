@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Header from './components/layouts/Header.vue';
 import Side from './components/layouts/Side.vue';
-import MainTap from './components/layouts/MainTap.vue';
+import MainTap from './components/layouts/tap/MainTap.vue';
 </script>
 
 <template>
