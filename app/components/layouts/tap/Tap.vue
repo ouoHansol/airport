@@ -1,9 +1,9 @@
 <template>
     <div v-for="tap in taps" :key="tap.path" class="tap" :class="{ 'active': tap.active }">
         <div class="tap-left-text">
-            {{ tap.name }}
+            <span @click="handleTap(tap.path)">{{ tap.name }}</span>
         </div>
-        <div style="cursor: pointer;" class="tap-left-close">
+        <div class="tap-left-close">
             X
         </div>
     </div>
@@ -14,22 +14,22 @@
 const taps = ref<Tap[]>([
     {
         name: '계획관리',
-        path: '/plan',
+        path: '/validation/flight/plan',
         active: false
     },
     {
         name: '비행검사관리',
-        path: '/flight-result',
+        path: '/validation/',
         active: true
     },
     {
         name: '비행검사 데이터이력',
-        path: '/flight-history',
+        path: '/inspection',
         active: false
     },
     {
         name: '질의게시판',
-        path: '/qna',
+        path: '/validation/flight',
         active: false
     },
 ]);
@@ -40,12 +40,21 @@ interface Tap {
     active: boolean;
 }
 
-const props = defineProps({
-    tap_name: {
-        type: String,
-        default: ''
-    }
-});
+const setActiveByPath = (path: string) => {
+    taps.value.forEach(tap => {
+        tap.active = tap.path === path;
+    });
+}
+
+const handleTap = async (path: string) => {
+  // 1) UI 상태 먼저 반영
+  setActiveByPath(path);
+  // 2) 페이지 이동
+  await navigateTo(path);
+};
+
+const route = useRoute();
+watch(() => route.path, (p) => setActiveByPath(p), { immediate: true });
 
 </script>
 
@@ -65,11 +74,13 @@ const props = defineProps({
     padding-left: 1rem;
     font-size: 0.8rem;
     font-weight: bold;
+    cursor: pointer;
 }
 .tap-left-close {
     padding-right: 1rem;
     font-size: 0.8rem;
     font-weight: bold;
+    cursor: pointer;
 }
 .active {
     color: var(--color-active);
