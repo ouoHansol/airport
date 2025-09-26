@@ -7,11 +7,9 @@
         <img @click="$router.push('/')" src="/img/inc_logo.png" alt="로고" style="height: 3rem;" />
         <span v-for="menu in headerMenus" 
                 :key="menu.path" 
-                @click="handleNavigation(menu.path)" 
-                :class="{'active': pathSegments === menu.path.split('/')[1]}">
+                @click="handleNavigation(menu.path)" >
                 {{ menu.name }}
         </span>
-        <button @click="addTab">탭 추가</button>
     </div>
 </template>
 
@@ -19,7 +17,7 @@
 
 const route = useRoute();
 
-const pathSegments : Ref<string> = ref(route.path.split('/')[1] || '');
+//const pathSegments : Ref<string> = ref(route.path.split('/')[1] || '');
 
 const headerMenus = ref([
     {name: '기준정보', path: '/'}, 
@@ -31,14 +29,14 @@ const headerMenus = ref([
     {name: '교육/자격', path: '/'}]); // education
 
 const handleNavigation = (menu: string) => {
-    pathSegments.value = menu.split('/')[1] || '';
+    //pathSegments.value = menu.split('/')[1] || '';
 
     navigateTo(menu);
 };
 
-const addTab = () => {
-    headerMenus.value.push({name: 'new-' + headerMenus.value.length + 1, path: '/'});
-}
+// const addTab = () => {
+//     headerMenus.value.push({name: 'new-' + headerMenus.value.length + 1, path: '/'});
+// }
 
 onMounted(() => {
 });

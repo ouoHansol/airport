@@ -15,16 +15,17 @@ const props = defineProps({
 
 <style scoped>  
 .input{
-    border: 1px solid #dcdcdc;
+    border: 1px solid var(--color-border);
     border-radius: 5px;
-    padding: 0 10px;
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
+    height: 100%;
+    width: 150px;
+    margin: 0 1rem 0 1rem;
+    justify-content: center;
+    align-items: center;
 }
 .input-container{
-    display: flex;
-    width: 10px;
-    height: 10xpx;
-    background-color: #dcdcdc;
+    height: 25px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-    <div v-for="tap in taps" :key="tap.path" class="tap" :class="{ 'active': tap.active }">
-        <div class="tap-left-text">
+    <div v-for="tap in taps" :key="tap.path" class="tap" :class="{ 'tap_active': tap.active }">
+        <div class="tap-left-text" :class="{'sub_active':tap.active}">
             <span @click="handleTap(tap.path)">{{ tap.name }}</span>
         </div>
         <div class="tap-left-close">
@@ -47,9 +47,9 @@ const setActiveByPath = (path: string) => {
 }
 
 const handleTap = async (path: string) => {
-  // 1) UI 상태 먼저 반영
+
   setActiveByPath(path);
-  // 2) 페이지 이동
+
   await navigateTo(path);
 };
 
@@ -82,8 +82,10 @@ watch(() => route.path, (p) => setActiveByPath(p), { immediate: true });
     font-weight: bold;
     cursor: pointer;
 }
-.active {
-    color: var(--color-active);
+.tap_active {
     border-bottom: 1px solid var(--color-white);
+}
+.sub_active {
+    color: var(--color-primary);
 }
 </style>
